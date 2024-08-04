@@ -1,0 +1,14 @@
+<!-- app/templates/core/register_vendor.html -->
+{% extends "base.html" %}
+
+{% block title %}Vendor Register{% endblock %}
+
+{% block content %}
+<h1>Vendor Register</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Register as Vendor</button>
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+{% endblock %}

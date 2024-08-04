@@ -32,5 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include('core.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),  # For password reset and other auth views
 ]
 

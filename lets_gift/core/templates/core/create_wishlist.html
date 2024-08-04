@@ -1,0 +1,13 @@
+<!-- app/templates/core/create_wishlist.html -->
+{% extends "base.html" %}
+
+{% block title %}Create Wishlist{% endblock %}
+
+{% block content %}
+<h1>Create a New Wishlist</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

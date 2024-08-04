@@ -1,0 +1,13 @@
+<!-- app/templates/core/all_wishlists.html -->
+{% extends "base.html" %}
+
+{% block title %}All Wishlists{% endblock %}
+
+{% block content %}
+<h1>All Wishlists</h1>
+<ul>
+    {% for wishlist in wishlists %}
+    <li>{{ wishlist.title }} - {{ wishlist.expiry_date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
